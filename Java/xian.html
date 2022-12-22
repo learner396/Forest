@@ -1,0 +1,1043 @@
+<!doctype html>
+<html style='font-size:18px !important'>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+
+<style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; --title-bar-height:20px; }
+.mac-os-11 { --title-bar-height:28px; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+body { margin: 0px; padding: 0px; height: auto; inset: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 36px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+.typora-export .task-list-item input { pointer-events: none; }
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
+button, input, select, textarea { color: inherit; font: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px; }
+thead, tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
+.CodeMirror-linenumber { user-select: none; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
+.md-fences-adv-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+svg { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li blockquote { margin: 1rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print {
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
+  #write { margin-top: 0px; padding-top: 0px; border-color: transparent !important; padding-bottom: 0px !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  .typora-export #write { break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+  .is-mac table { break-inside: avoid; }
+  .typora-export-show-outline .typora-export-sidebar { display: none; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+.MathJax_ref { fill: currentcolor; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.reversefootnote { font-family: ui-monospace, sans-serif; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.6; font-family: var(--monospace); }
+code { text-align: left; vertical-align: initial; }
+a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+.md-expand mark .md-meta { opacity: 0.3 !important; }
+mark .md-meta { color: rgb(0, 0, 0); }
+@media print {
+  .typora-export h1, .typora-export h2, .typora-export h3, .typora-export h4, .typora-export h5, .typora-export h6 { break-inside: avoid; }
+}
+.md-diagram-panel .messageText { stroke: none !important; }
+.md-diagram-panel .start-state { fill: var(--node-fill); }
+.md-diagram-panel .edgeLabel rect { opacity: 1 !important; }
+.md-fences.md-fences-math { font-size: 1em; }
+.md-fences-advanced:not(.md-focus) { padding: 0px; white-space: nowrap; border: 0px; }
+.md-fences-advanced:not(.md-focus) { background: inherit; }
+.typora-export-show-outline .typora-export-content { max-width: 1440px; margin: auto; display: flex; flex-direction: row; }
+.typora-export-sidebar { width: 300px; font-size: 0.8rem; margin-top: 80px; margin-right: 18px; }
+.typora-export-show-outline #write { --webkit-flex:2; flex: 2 1 0%; }
+.typora-export-sidebar .outline-content { position: fixed; top: 0px; max-height: 100%; overflow: hidden auto; padding-bottom: 30px; padding-top: 60px; width: 300px; }
+@media screen and (max-width: 1024px) {
+  .typora-export-sidebar, .typora-export-sidebar .outline-content { width: 240px; }
+}
+@media screen and (max-width: 800px) {
+  .typora-export-sidebar { display: none; }
+}
+.outline-content li, .outline-content ul { margin-left: 0px; margin-right: 0px; padding-left: 0px; padding-right: 0px; list-style: none; }
+.outline-content ul { margin-top: 0px; margin-bottom: 0px; }
+.outline-content strong { font-weight: 400; }
+.outline-expander { width: 1rem; height: 1.42857rem; position: relative; display: table-cell; vertical-align: middle; cursor: pointer; padding-left: 4px; }
+.outline-expander::before { content: ""; position: relative; font-family: Ionicons; display: inline-block; font-size: 8px; vertical-align: middle; }
+.outline-item { padding-top: 3px; padding-bottom: 3px; cursor: pointer; }
+.outline-expander:hover::before { content: ""; }
+.outline-h1 > .outline-item { padding-left: 0px; }
+.outline-h2 > .outline-item { padding-left: 1em; }
+.outline-h3 > .outline-item { padding-left: 2em; }
+.outline-h4 > .outline-item { padding-left: 3em; }
+.outline-h5 > .outline-item { padding-left: 4em; }
+.outline-h6 > .outline-item { padding-left: 5em; }
+.outline-label { cursor: pointer; display: table-cell; vertical-align: middle; text-decoration: none; color: inherit; }
+.outline-label:hover { text-decoration: underline; }
+.outline-item:hover { border-color: rgb(245, 245, 245); background-color: var(--item-hover-bg-color); }
+.outline-item:hover { margin-left: -28px; margin-right: -28px; border-left: 28px solid transparent; border-right: 28px solid transparent; }
+.outline-item-single .outline-expander::before, .outline-item-single .outline-expander:hover::before { display: none; }
+.outline-item-open > .outline-item > .outline-expander::before { content: ""; }
+.outline-children { display: none; }
+.info-panel-tab-wrapper { display: none; }
+.outline-item-open > .outline-children { display: block; }
+.typora-export .outline-item { padding-top: 1px; padding-bottom: 1px; }
+.typora-export .outline-item:hover { margin-right: -8px; border-right: 8px solid transparent; }
+.typora-export .outline-expander::before { content: "+"; font-family: inherit; top: -1px; }
+.typora-export .outline-expander:hover::before, .typora-export .outline-item-open > .outline-item > .outline-expander::before { content: "−"; }
+.typora-export-collapse-outline .outline-children { display: none; }
+.typora-export-collapse-outline .outline-item-open > .outline-children, .typora-export-no-collapse-outline .outline-children { display: block; }
+.typora-export-no-collapse-outline .outline-expander::before { content: "" !important; }
+.typora-export-show-outline .outline-item-active > .outline-item .outline-label { font-weight: 700; }
+.md-inline-math-container mjx-container { zoom: 0.95; }
+mjx-container { break-inside: avoid; }
+
+
+
+.cm-s-inner.CodeMirror {
+    background-color: #003444;
+    color: #EEFFFF;
+    padding: 0.75rem 0.15rem 0.75rem 0.15rem;
+    border-radius: 6px;
+}
+
+#write .CodeMirror-cursors .CodeMirror-cursor {
+    border-left: 2px solid #f0f0f0;
+}
+
+.cm-s-inner .cm-header, .cm-s-inner.cm-header {
+    color: #A77DF4;
+}
+
+.cm-s-inner .CodeMirror-gutters {
+    background: #003444;
+    color: #546E7A;
+    border: none;
+}
+
+.code-tooltip {
+    box-shadow: 0 1px 1px 0 rgba(0, 28, 36, .3);
+    border-top: 1px solid #eef2f2;
+    color: #fff;
+    background: #003444;
+    border-radius: 6px;
+}
+
+.cm-s-inner .CodeMirror-guttermarker,
+.cm-s-inner .CodeMirror-guttermarker-subtle,
+.cm-s-inner .CodeMirror-linenumber {
+    color: #546E7A;
+}
+
+.cm-s-inner .CodeMirror-cursor {
+    border-left: 1px solid #FFCC00;
+}
+
+.cm-s-inner.cm-fat-cursor .CodeMirror-cursor {
+    background-color: #5d6d5c80 !important;
+}
+.cm-s-inner .cm-animate-fat-cursor {
+    background-color: #5d6d5c80 !important;
+}
+
+.cm-s-inner div.CodeMirror-selected {
+    background: rgba(128, 203, 196, 0.2);
+}
+
+.cm-s-inner.CodeMirror-focused div.CodeMirror-selected {
+    background: rgba(128, 203, 196, 0.2);
+}
+
+.cm-s-inner .CodeMirror-line::selection,
+.cm-s-inner .CodeMirror-line>span::selection,
+.cm-s-inner .CodeMirror-line>span>span::selection {
+    background:  rgba(0,178,123,0.2);
+}
+
+.cm-s-inner .CodeMirror-line::-moz-selection,
+.cm-s-inner .CodeMirror-line>span::-moz-selection,
+.cm-s-inner .CodeMirror-line>span>span::-moz-selection {
+    background: rgba(0,178,123,0.2);
+}
+
+.cm-s-inner .CodeMirror-activeline-background {
+    background: #003444;
+}
+
+.cm-s-inner .cm-keyword {
+    color: #C792EA;
+}
+
+.cm-s-inner .cm-operator {
+    color: #E9EDED;
+}
+
+.cm-s-inner .cm-variable-2 {
+    color: #80CBC4;
+}
+
+.cm-s-inner .cm-variable-3,
+.cm-s-inner .cm-type {
+    color: #82B1FF;
+}
+
+.cm-s-inner .cm-builtin {
+    color: #DECB6B;
+}
+
+.cm-s-inner .cm-atom {
+    color: #F77669;
+}
+
+.cm-s-inner .cm-number {
+    color: #F77669;
+}
+
+.cm-s-inner .cm-def {
+    color: #00AEC4;
+}
+
+.cm-s-inner .cm-string {
+    color: #C3E88D;
+}
+
+.cm-s-inner .cm-string-2 {
+    color: #80CBC4;
+}
+
+.cm-s-inner .cm-comment {
+    color: #AEBBC2;
+}
+
+.cm-s-inner .cm-variable {
+    color: #82B1FF;
+}
+
+.cm-s-inner .cm-tag {
+    color: #80CBC4;
+}
+
+.cm-s-inner .cm-meta {
+    color: #80CBC4;
+}
+
+.cm-s-inner .cm-attribute {
+    color: #FFCB6B;
+}
+
+.cm-s-inner .cm-property {
+    color: #80CBAE;
+}
+
+.cm-s-inner .cm-qualifier {
+    color: #DECB6B;
+}
+
+.cm-s-inner .cm-variable-3,
+.cm-s-inner .cm-type {
+    color: #DECB6B;
+}
+
+.cm-s-inner .cm-error {
+    color: #FFFFFF;
+    background-color: #FF5370;
+}
+
+.cm-s-inner .CodeMirror-matchingbracket {
+    text-decoration: underline;
+    color: white !important;
+}
+@import url('file:///C://Users//16837//AppData//Roaming//Typora/themes/');
+@import url('file:///C://Users//16837//AppData//Roaming//Typora/themes/');
+
+/** color vars **/
+:root {
+  /* system vars*/
+  --primary-color: #f0f0f0; /* color of primary buttons */
+  --side-bar-bg-color: #003444;
+  --active-file-bg-color: #004144; /* sidebar active & hover */
+  --active-file-text-color: #ffffff;
+  --active-file-border-color: #757575;
+  --item-hover-text-color: #fff;
+  --item-hover-bg-color: #005C44;  /* sidebar footer item hover*/
+  --control-text-color: #ddd;
+  --control-text-hover-color: #fff;
+  --monospace: 'SourceHanSansSC','JetBrains Mono', -apple-system, sans-serif;
+
+  /* custom vars */
+  --theme-primary-color: #00997B; /* rgb(0, 153, 123) */
+  --white-color: #fff;
+
+  /* head */
+  --head-text-color: #333444;
+  --h1-text-color: rgba(0, 52, 68, 0.9);
+  --h5-text-color: var(--theme-primary-color);
+  --h6-text-color: rgba(0, 153, 123, 0.838);
+  --head-prefix-color: #D0D0D0;
+
+  /* text */
+  --text-color: #363C42;
+  --text-search-hit-color: rosybrown;
+
+  /* highlight */
+  --highlight-bg-color: #FFF3F3;
+  --highlight-text-color: #FF2F2F;
+
+  /* a link */
+  --a-text-color: var(--theme-primary-color);
+
+  /* annotate */
+  --annotate-text-color: #8CAA16;
+
+  /* inline code */
+  --inline-code-bg-color: #f3f3f3;
+  --inline-code-text-color: #00769A;
+
+  /* selection */
+  --selection-text-color: rgba(0, 153, 123, 0.2);
+
+  /* check-box */
+  --checked-text-color: #ADB5BD;
+  --line-through-color: #CFD4DA;
+  --border-color: #868E96;
+
+  /* table */
+  --table-border-color: #DADCDE;
+  --table-cell-bg-color:rgba(0, 153, 123, 0.03);
+
+  /* quote */
+  --quote-bg-color: rgba(0, 153, 123, 0.05);
+  --quote-text-color: #81888D ;
+
+  /* sidebar */
+  --sidebar-footer-dropdown-menu-border-color: #212529;
+  --sidebar-footer-dropdown-menu-item-border-color: #ADB5BD;
+  --sidebar-footer-item-hover-bg-color: #004544;
+  --siderbar-dropdown-menu-text-color: #fff;
+
+  /* sidebar resizer */
+  --sidebar-resizer: #6eace2;
+
+  /*--window-border: #e5e5e5;*/
+  --window-border: #1F6F57; /*sidebar layout border*/
+}
+
+
+/* global && write area */
+#write {
+  position: static;
+  width: 90%;
+  max-width: 900px;
+  line-height: 1.6;
+  padding: 36px 0 70px;
+}
+html, body, #write {
+  background: var(--white-color);
+  font-family: 'SourceHanSansSC','JetBrains Mono', -apple-system, sans-serif;
+}
+p {
+  font-size: 1em;
+  font-family: 'SourceHanSansSC', 'JetBrains Mono', -apple-system, sans-serif;
+  line-height: 1.6;
+  color: var(--text-color);
+}
+
+
+/* search match active*/
+.md-search-hit.md-search-select{
+  background-color: var(--text-search-hit-color);
+}
+
+
+/* heading */
+h1, h2, h3, h4, h5, h6 {
+  width: auto;
+  line-height: 2;
+  font-style: normal;
+  margin-top: 14px;
+  margin-bottom: 14px;
+}
+h2, h3, h4 {
+  color: var(--head-text-color);
+}
+h2::before, h3::before, h4::before, h5::before, h6::before,
+h2.md-focus::before, h3.md-focus::before, h4.md-focus::before, h5.md-focus::before, h6.md-focus::before {
+  position: absolute;
+  right: calc(100% + 10px);
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--head-prefix-color);
+  font-size: 0.8rem;
+  font-weight: bold;
+  font-variant: 'small-caps';
+  line-height: 2;
+  padding: 0;
+  border: 0;
+}
+
+#write h1 {
+  font-size: 2.1rem;
+  font-weight: 900;
+  text-align: center;
+  color: var(--h1-text-color);
+}
+#write h1>span{
+  position: relative;
+  display: inline-block;
+}
+#write h1>span:after{
+  content: '';
+  display: block;
+  position: absolute;
+  border-top: 3px double var(--h1-text-color);
+  height: 3px;
+  width: 15rem;
+  max-width: 80%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#write h2 {
+  font-size: 1.7rem;
+  font-weight: 800;
+}
+#write>h2::before {
+  content: 'H2';
+}
+
+#write h3 {
+  font-size: 1.4rem;
+  font-weight: 800;
+}
+#write>h3::before {
+  content: 'H3';
+}
+
+#write h4, #write h5, #write h5 {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+#write h5 {
+  color: var(--h5-text-color);
+}
+#write h6 {
+  color: var(--h6-text-color);
+}
+#write>h4::before {
+  content: 'H4';
+}
+#write>h5::before {
+  content: 'H5';
+}
+#write>h6::before {
+  content: 'H6';
+}
+
+
+/* inline element */
+#write a {
+  color: var(--a-text-color);
+  cursor: pointer;
+  padding: 0 3px 0 3px;
+  text-decoration: none;
+}
+#write a:hover {
+  text-decoration: none;
+  border-bottom: 1px solid;
+}
+
+strong {
+  font-weight: 700;
+}
+
+mark {
+  background: var(--highlight-bg-color);
+  color: var(--highlight-text-color);
+  font-weight: 500;
+  padding: 0 2px 0 2px;
+  margin: 0 2px 0 2px;
+  border-radius: 2px;
+}
+
+span.md-comment {
+  color: var(--annotate-text-color);
+}
+
+/* footnote */
+sup.md-footnote {
+  color: var(--a-text-color);
+  background-color: var(--white-color);
+}
+.footnotes .md-def-name {
+  padding-right: 4ch;
+}
+
+/* inline code */
+#write code{
+  margin: 0 2px;
+  padding: 0px 4px;
+  font-size: 0.95rem;
+  background: var(--inline-code-bg-color);
+  display: inline;
+  vertical-align: top;
+  line-height: 1.6;
+  border-radius: 6px;
+  font-weight: 700;
+  color: var(--inline-code-text-color);
+}
+.md-hover-tip .code-tooltip-content, .md-hover-tip .md-arrow:after {
+  background: var(--side-bar-bg-color);
+}
+#write *[mdtype="heading"] code{
+  font-size: inherit!important;
+  vertical-align: baseline;
+}
+
+img {
+  margin-top: 0.2rem;
+  margin-bottom: 0.2rem;
+}
+p>.md-image:only-child:not(.md-img-error) img, p>img:only-child {
+  display: block;
+  margin: unset;
+}
+/* operation img tip dialog */
+#user-context-menu>li>a, .dropdown-menu>li>a {
+  color: var(--theme-primary-color);
+  font-weight: 500;
+}
+#user-context-menu>li>a:hover, #user-context-menu>li.active>a {
+  background: var(--theme-primary-color);
+  color: #fff;
+}
+#zoom-img-menu.context-menu.dropdown-menu>li>a:hover,
+#zoom-img-menu.context-menu.dropdown-menu>li.active>a {
+  background: var(--theme-primary-color);
+  color: #fff;
+}
+#zoom-img-menu.dropdown-menu .divider {
+  background: var(--theme-primary-color);
+}
+
+/* underline */
+#write u {
+  text-decoration: none;
+}
+#write u>span {
+  border-bottom: 1px solid;
+}
+
+/* selection */
+span::selection, *::selection {
+  background: var(--selection-text-color);
+}
+
+
+/* block element */
+/* YAML front */
+pre.md-meta-block {
+  font-size: .85rem;
+  color: var(--quote-text-color);
+  background: var(--quote-bg-color);
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+/* toc */
+#write .md-toc {
+  font-size: 1rem;
+}
+#write a.md-toc-inner {
+  color: var(--theme-primary-color);
+}
+#write a.md-toc-inner:hover {
+  text-decoration: underline;
+  border-bottom: none;
+}
+p.md-toc-content {
+  line-height: 1.8;
+  font-weight: 500;
+}
+.md-toc-h2 .md-toc-inner {
+  margin-left: 1em;
+}
+.md-toc-h3 .md-toc-inner {
+  margin-left: 2em;
+}
+.md-toc-h4 .md-toc-inner {
+  margin-left: 3em;
+}
+.md-toc-h5 .md-toc-inner {
+  margin-left: 4em;
+}
+.md-toc-h6 .md-toc-inner {
+  margin-left: 5em;
+}
+
+/* quote */
+blockquote {
+  position: relative;
+  padding: 1rem;
+  background-color: var(--quote-bg-color);
+  border-radius: 6px;
+  line-height: 1;
+}
+blockquote p {
+  color: var(--quote-text-color);
+  margin: 0 ;
+}
+blockquote::before {
+  content: '';
+  position: absolute;
+  top: 0rem;
+  left: 0rem;
+  height: 100%;
+  width: .30rem;
+  background: var(--theme-primary-color);
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+}
+
+/* hr */
+div[mdtype='hr'] {
+  text-align: center;
+}
+hr {
+  border-top: 1px dashed var(--theme-primary-color);
+  transform: scaleY(0.5);
+  width: 90%;
+}
+
+/* ul, ol */
+ul>li>ul>li {
+  list-style-type: circle;
+}
+ul>li>ul>li>ul>li {
+  list-style-type: disc;
+}
+ul>li>ul>li>ul>li>ul>li {
+  list-style-type: circle;
+}
+ul>li>ul>li>ul>li>ul>li>ul>li {
+  list-style-type: disc;
+}
+ul>li>ul>li>ul>li>ul>li>ul>li>ul>li {
+  list-style-type: circle;
+}
+
+ol ul li {
+  list-style-type: circle;
+}
+ol ul>li>ul>li {
+  list-style-type: disc;
+}
+ol ul>li>ul>li>ul>li {
+  list-style-type: circle;
+}
+ol ul>li>ul>li>ul>li>ul>li {
+  list-style-type: disc;
+}
+ol ul>li>ul>li>ul>li>ul>li>ul>li {
+  list-style-type: circle;
+}
+ol ul>li>ul>li>ul>li>ul>li>ul>li>ul>li {
+  list-style-type: circle;
+}
+
+ol>li>ol>li {
+  list-style-type: lower-alpha;
+}
+ol>li>ol>li>ol>li {
+  list-style-type: decimal;
+}
+ol>li>ol>li>ol>li>ol>li {
+  list-style-type: lower-alpha;
+}
+ol>li>ol>li>ol>li>ol>li>ol>li {
+  list-style-type: decimal;
+}
+ol>li>ol>li>ol>li>ol>li>ol>li>ol>li {
+  list-style-type: lower-alpha;
+}
+ol>li>ol>li>ol>li>ol>li>ol>li>ol>li>ol>li {
+  list-style-type: decimal;
+}
+
+/* task list */
+.task-list-item.md-task-list-item {
+  list-style-type: none;
+}
+.md-task-list-item>input, #write .md-task-list-item>input[type=checkbox] {
+  margin-left: -1.6rem;
+  width: 0.5rem;
+  height: 0.5rem;
+}
+
+.md-task-list-item>input:before {
+  border: 2px solid var(--border-color);
+  width: 1rem;
+  height: 1rem;
+  background:  var(--white-color);
+  content: ' ';
+  transition: background-color 200ms ease-in-out;
+  display: block;
+}
+.md-task-list-item>input:checked:before,
+.md-task-list-item>input[checked]:before {
+  background: var(--theme-primary-color);
+  border-width: 1px;
+  transition: background-color 200ms ease-in-out;
+  border: 2px solid var(--theme-primary-color);
+}
+.md-task-list-item>input[checked]+p {
+  color: var(--checked-text-color);
+  text-decoration: line-through;
+  text-decoration-color: var(--line-through-color);
+}
+
+.md-task-list-item>input:checked:after,
+.md-task-list-item>input[checked]:after {
+  opacity: 1;
+}
+.md-task-list-item>input:after {
+  opacity: 1;
+  -webkit-transition: opacity 0.05s ease-in-out;
+  -moz-transition: opacity 0.05s ease-in-out;
+  transition: opacity 0.05s ease-in-out;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  position: absolute;
+  top: 0.25rem;
+  left: 0.19rem;
+  width: 0.6rem;
+  height: 0.375rem;
+  border: 2px solid var(--white-color);
+  border-top: 0;
+  border-right: 0;
+  content: ' ';
+  opacity: 0;
+}
+
+/* table */
+.md-table-edit .btn-default {
+  color: inherit;
+}
+table.md-table {
+  width: auto;
+  min-width: 80%;
+}
+table tr:nth-child(2n), table thead  {
+  background-color: var(--table-cell-bg-color);
+}
+table thead {
+  font-weight: 900;
+}
+
+table tbody tr {
+  border-bottom: 1px solid var(--table-border-color);
+}
+table tr:first-of-type {
+  border-top: 1px solid var(--table-border-color);
+}
+table tr th, table tr td {
+  border-left: 1px solid var(--table-border-color);
+  padding: 6px 13px;
+}
+table tr th:last-of-type, table tr td:last-of-type {
+  border-right: 1px solid var(--table-border-color);
+}
+
+/* code */
+.auto-suggest-container {
+  border: 1px solid var(--theme-primary-color);
+}
+.auto-suggest-container li:hover, .auto-suggest-container li.active {
+  color: #fff;
+  background: var(--theme-primary-color);
+}
+
+
+/* outline */
+#toc-dropmenu {
+  width: 400px;
+}
+#toc-dropmenu.open {
+  background: var(--side-bar-bg-color);
+  color: var(--white-color);
+}
+#toc-dropmenu .outline-title-wrapper .outline-title {
+  font-weight: 900;
+}
+#toc-dropmenu .outline-title-wrapper {
+  height: 2.5rem;
+}
+.outline-title-wrapper .btn {
+  color: var(--white-color);
+  line-height: 2.5rem;
+  vertical-align: middle;
+}
+
+.dropdown-menu .divider {
+  background: var(--white-color);
+}
+.outline-item:hover {
+  background: var(--active-file-bg-color);
+}
+.outline-expander {
+  display: inline-block;
+  margin-right: 0.4rem;
+}
+.outline-label {
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: calc(100% - 1.5rem);
+}
+.outline-label:hover {
+  text-decoration: none;
+}
+
+
+/* notification */
+#md-notification:before {
+  top: 18px;
+}
+#md-notification p {
+  color: var(--theme-primary-color);
+  font-weight: 500;
+}
+.btn-default {
+  background: var(--theme-primary-color);
+  color: var(--white-color);
+}
+.btn-default.active, .btn-default.focus, .btn-default:active,
+.btn-default:focus, .btn-default:hover,
+.open>.dropdown-toggle.btn-default {
+  color: var(--theme-primary-color);
+  border: 1px solid var(--theme-primary-color);
+  background: var(--white-color);
+}
+
+
+/* sidebar */
+.sidebar-menu {
+  color: var(--siderbar-dropdown-menu-text-color);
+}
+.sidebar-menu .sidebar-content  .sidebar-content-content {
+  font-weight: 500;
+}
+
+#file-library-tree .file-tree-node {
+  padding-left: 1.5em;
+  color: var(--control-text-color);
+  padding-top: 6px;
+  white-space: nowrap;
+  line-height: 1.5;
+}
+.file-tree-node .file-node-content:hover {
+  cursor: pointer;
+}
+#file-library-tree .file-node-expanded>.file-node-content>.fa-folder:before {
+  content: '\f07c';
+}
+#file-library-tree .fa-file-text-o:before {
+  content: '\f1ce'
+}
+
+.file-tree-node.active>.file-node-background {
+  border-left: 4px solid var(--theme-primary-color);
+}
+#typora-sidebar .file-list-item.file-library-node:not(.active):hover {
+  background: var(--active-file-bg-color);
+}
+#typora-sidebar .file-tree-node.file-library-file-node:not(.active):hover .file-node-background {
+  background: var(--active-file-bg-color);
+  height: 2.2rem;
+}
+
+/* siderbar footer*/
+.sidebar-footer-main-item #sidebar-files-menu {
+  border: 1px solid var(--sidebar-footer-dropdown-menu-border-color);
+}
+.sidebar-menu  .dropdown-menu>li>a, .sidebar-menu .dropdown-menu>li>a:focus, .sidebar-menu .dropdown-menu>li>a:hover {
+  color: var(--siderbar-dropdown-menu-text-color);
+}
+.dropdown-menu>li>a:hover {
+  background: var(--active-file-bg-color);
+}
+.sidebar-footer-main-item .dropdown-menu .menuitem-group-label {
+  font-weight: 500;
+}
+.dropdown-menu .selected-folder-menu-item a:after {
+  color: var(--theme-primary-color);
+}
+.file-sort-item .ty-side-sort-btn {
+  cursor: pointer;
+}
+#sidebar-files-menu>.show+.menuitem-group-label.show {
+  border-top: 1px solid var(--sidebar-footer-dropdown-menu-item-border-color);
+}
+.footer-item:hover, .sidebar-footer-item:hover {
+  background: var(--sidebar-footer-item-hover-bg-color);
+}
+
+/* sidebar search*/
+.sidebar-menu .ty-sidebar-search-panel #file-library-search-input {
+  color: var(--white-color);
+}
+
+
+/* resizer */
+#typora-sidebar-resizer.dragging{
+  color: var(--sidebar-resizer);
+}
+
+
+/* print style */
+@media print {
+  .typora-export * {
+    -webkit-print-color-adjust: exact;
+  }
+
+  #write>h1::before, #write>h2::before, #write>h3::before, #write>h4::before, #write>h5::before, #write>h6::before {
+    content: '';
+    bottom: 1rem;
+  }
+
+  #write u {
+    text-decoration: none;
+  }
+  #write u>span {
+    border-bottom: 1px solid;
+  }
+}
+
+
+/* source code */
+#typora-source {
+  font-family: 'SourceHanSansSC','JetBrains Mono', -apple-system, sans-serif;
+  line-height: 1.6;
+}
+#typora-source .cm-header {
+  color: var(--theme-primary-color);
+}
+
+
+
+</style><title>线程</title>
+</head>
+<body class='typora-export os-windows'><div class='typora-export-content'>
+<div id='write'  class=''><p>&nbsp;</p><div class='md-toc' mdtype='toc'><p class="md-toc-content" role="list"><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n273"><a class="md-toc-inner" href="#说说线程的创建方式">说说线程的创建方式</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n48"><a class="md-toc-inner" href="#说说线程的状态">说说线程的状态</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n63"><a class="md-toc-inner" href="#说说你了解的线程同步方式">说说你了解的线程同步方式</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n83"><a class="md-toc-inner" href="#synchronized和lock有什么区别">synchronized和Lock有什么区别</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n110"><a class="md-toc-inner" href="#说说volatile的用法及原理">说说volatile的用法及原理</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n133"><a class="md-toc-inner" href="#说说你对threadlocal的理解">说说你对ThreadLocal的理解</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n145"><a class="md-toc-inner" href="#请你说说线程和协程的区别">请你说说线程和协程的区别</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n164"><a class="md-toc-inner" href="#请你说说多线程">请你说说多线程</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n177"><a class="md-toc-inner" href="#说说你了解的线程通信方式">说说你了解的线程通信方式</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n191"><a class="md-toc-inner" href="#说说怎么保证线程安全">说说怎么保证线程安全</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n218"><a class="md-toc-inner" href="#你知道哪些线程安全的集合">你知道哪些线程安全的集合？</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n230"><a class="md-toc-inner" href="#说说你对线程池的理解">说说你对线程池的理解</a></span></p></div><p>&nbsp;</p><h3 id='说说线程的创建方式'><span>说说线程的创建方式</span></h3><p><span>得分点 Thread、Runnable、Callable </span></p><p><span>标准回答 </span></p><p><span>创建线程有三种方式,分别是继承Thread类、实现Runnable接口、实现Callable接口。 </span></p><ol start='' ><li><p><span>通过继承Thread类来创建线程的步骤如下：</span></p><ul><li><span>定义Thread类的子类,并重写该类的run()方法,该方法将作为线程执行体。 </span></li><li><span>创建Thread子类的实例,即创建了线程对象。</span></li><li><span>调用线程对象的start()方法来启动该线程。</span></li></ul></li><li><p><span>通过实现Runnable接口来创建线程的步骤如下：</span></p><ul><li><span>定义Runnable接口的实现类,并实现该接口的run()方法,该方法将作为线程执行体。</span></li><li><span>创建Runnable实现类的实例,并将其作为参数来创建Thread对象,Thread对象为线程对象。</span></li><li><span>调用线程对象的start()方法来启动该线程。</span></li></ul></li><li><p><span>通过实现Callable接口来创建线程的步骤如下：</span></p><ul><li><span>定义Callable接口的实现类,并实现call()方法,该方法将作为线程执行体。</span></li><li><span>创建Callable实现类的实例,并以该实例作为参数,创建FutureTask对象。</span></li><li><span>使用FutureTask对象作为参数,创建Thread对象,然后启动线程。</span></li><li><span>调用FutureTask对象的get()方法,获得子线程执行结束后的返回值。</span></li></ul></li></ol><blockquote><p><span>归纳起来,创建线程的方式实际只有两种：继承父类和实现接口。</span></p></blockquote><p><span>而使用Runnable接口和Callable接口的方式,区别在于</span><u><span>前者不能获得线程执行结束的返回值</span></u><span>,</span><u><span>后者可以获得线程执行结束的返回值</span></u><span>。</span></p><p><span>而继承父类和实现接口这两种方式的优缺点是：</span></p><ul><li><span>采用接口的方式创建线程,优点是线程类还可以继承于其他类,并且多个线程可以共享一个线程体,适合多个线程处理同一份资源的情况。缺点是编程稍微麻烦一点点。</span></li><li><span>采用继承的方式创建线程,优点是编程稍微简单一点点。缺点是因为线程类已经继承了Thread类,所以就不能继承其他的父类了。</span></li></ul><p><span>所以,通常情况下,更推荐采用接口的方式来创建线程。如果需要返回值,就使用Callable接口,否则使用Runnable接口即可。</span></p><hr /><p>&nbsp;</p><h3 id='说说线程的状态'><span>说说线程的状态</span></h3><p><strong><span>得分点</span></strong><span> NEW、RUNNABLE、BLOCKED、WTING、TIMED_WTING、TERMINATED</span></p><p><strong><span>标准回答</span></strong></p><p><span>Java线程在运行的生命周期中,在任意给定的时刻,只能处于下列6种状态之一： </span></p><p><span>NEW ：初始状态,线程被创建,但是还没有调用start方法。 </span></p><p><span>RUNNABLE：可运行状态,线程正在JVM中执行,但是有可能在等待操作系统的调度。 </span></p><p><span>BLOCKED ：阻塞状态,线程正在等待获取监视器锁。 </span></p><p><span>WTING ：等待状态,线程正在等待其他线程的通知或中断。 </span></p><p><span>TIMED_WTING：超时等待状态,在WTING的基础上增加了超时时间,即超出时间自动返回。 </span></p><p><span>TERMINATED：终止状态,线程已经执行完毕。 </span></p><p><span>线程在创建之后默认为初始状态,在调用start方法之后进入可运行状态,可运行状态不代表线程正在运行,它有可能正在等待操作系统的调度。进入等待状态的线程需要其他线程的通知才能返回到可运行状态,而超时等待状态相当于在等待状态的基础上增加了超时限制,除了他线程的唤醒,在超时时间到达时也会返回运行状态。此外,线程在执行同步方法时,在没有获取到锁的情况下,会进入到阻塞状态。线程在执行完run方法之后,会进入到终止状态。 </span></p><p><strong><span>加分回答</span></strong></p><p><span>Java将操作系统中的就绪和运行两个状态合并为可运行状态（RUNNABLE）。线程阻塞于synchronized的监视器锁时会进入阻塞状态,而线程阻塞于Lock锁时进入的却是等待状态,这是因为Lock接口实现类对于阻塞的实现均使用了LockSupport类中的相关方法。</span></p><hr /><p>&nbsp;</p><h3 id='说说你了解的线程同步方式'><span>说说你了解的线程同步方式</span></h3><p><strong><span>得分点</span></strong><span> synchronized、Lock </span></p><p><strong><span>标准回答</span></strong><span> </span></p><p><span>Java</span><u><span>主要通过加锁的方式实现线程同步</span></u><span>,而锁有两类,分别是</span><u><span>synchronized</span></u><span>和</span><u><span>Lock</span></u><span>。 </span></p><p><span>synchronized可以加在三个不同的位置,对应三种不同的使用方式,这三种方式的区别是锁对象不同： </span></p><ol start='' ><li><span>加在普通方法上,则锁是当前的实例（this）。 </span></li><li><span>加在静态方法上,则锁是当前类的Class对象。 </span></li><li><span>加在代码块上,则需要在关键字后面的小括号里,显式指定一个对象作为锁对象。 </span></li></ol><blockquote><p><span>不同的锁对象,意味着不同的锁粒度,所以我们不应该无脑地将它加在方法前了事,尽管通常这可以解决问题。而是应该根据要锁定的范围,准确的选择锁对象,从而准确地确定锁的粒度,降低锁带来的性能开销。 </span></p></blockquote><p><span>synchronized是比较早期的API,在设计之初没有考虑到超时机制、非阻塞形式,以及多个条件变量。若想通过升级的方式让synchronized支持这些相对复杂的功能,则需要大改它的语法结构,不利于兼容旧代码。因此,JDK的开发团队在1.5引入了Lock接口,并通过Lock支持了上述的功能。Lock支持的功能包括：支持响应中断、支持超时机制、支持以非阻塞的方式获取锁、支持多个条件变量（阻塞队列）。 </span></p><p><strong><span>加分回答</span></strong><span> </span></p><p><span>synchronized采用“CAS+Mark Word”实现,为了性能的考虑,并通过锁升级机制降低锁的开销。在并发环境中,synchronized会随着多线程竞争的加剧,按照如下步骤逐步升级：无锁、偏向锁、轻量级锁、重量级锁。 </span></p><p><span>Lock则采用“CAS+volatile”实现,其实现的核心是AQS。AQS是线程同步器,是一个线程同步的基础框架,它基于模板方法模式。在具体的Lock实例中,锁的实现是通过继承AQS来实现的,并且可以根据锁的使用场景,派生出公平锁、不公平锁、读锁、写锁等具体的实现。</span></p><hr /><p>&nbsp;</p><h3 id='synchronized和lock有什么区别'><span>synchronized和Lock有什么区别</span></h3><p><strong><span>得分点</span></strong><span> 使用方式、主要特性、实现机制 </span></p><p><strong><span>标准回答</span></strong></p><p><span>synchronized和Lock都是锁,都是线程同步的手段,它们的区别主要体现在如下三个方面： </span></p><ol start='' ><li><p><u><span>使用方式</span></u><span>的区别 synchronized关键字可以作用在静态方法、实例方法和代码块上,它是一种隐式锁,即我们无需显式地获取和释放锁,所以使用起来十分的方便。在这种同步方式下,我们需要依赖Monitor（同步监视器）来实现线程通信。若关键字作用在静态方法上,则Monitor就是当前类的Class对象；若关键字作用在实例方法上,则Monitor就是当前实例（this）；若关键字作用在代码块上,则需要在关键字后面的小括号里显式指定一个对象作为Monitor。 Lock接口是显式锁,即我们需要调用其内部定义的方法显式地加锁和解锁,相对于synchronized来说这显得有些繁琐,但是却提供了更大的灵活性。在这种同步方式下,我们需要依赖Condition对象来实现线程通信,该对象是由Lock对象创建出来的,依赖于Lock。每个Condition代表一个等待队列,而一个Lock可以创建多个Condition对象。相对而言,每个Monitor也代表一个等待队列,但synchronized只能有一个Monitor。所以,在实现线程通信方面,Lock接口具备更大的灵活性。</span></p></li><li><p><u><span>功能特性</span></u><span>的区别 synchronized是早期的API,Lock则是在JDK 1.5时引入的。在设计上,Lock弥补了synchronized的不足,它新增了一些特性,均是synchronized不具备的,这些特性包括：</span></p><ul><li><span>可中断地获取锁：线程在获取锁的过程中可以被中断。</span></li><li><span>非阻塞地获取锁：该方法在调用后立刻返回,若能取到锁则返回true,否则返回false。</span></li><li><span>可超时地获取锁：若线程在到达超时时间后仍未获得锁,并且线程也没有被中断,则返回false。</span></li></ul></li><li><p><u><span>实现机制</span></u><span>的区别 synchronized的底层是采用Java对象头来存储锁信息的,对象头包含三部分,分别是Mark Word、Class Metadata Address、Array length。其中,Mark Word用来存储对象的hashCode及锁信息,Class Metadata Address用来存储对象类型的指针,而Array length则用来存储数组对象的长度。 AQS是队列同步器,是用来构建锁的基础框架,Lock实现类都是基于AQS实现的。AQS是基于模板方法模式进行设计的,所以锁的实现需要继承AQS并重写它指定的方法。AQS内部定义了一个FIFO的队列来实现线程的同步,同时还定义了同步状态来记录锁的信息。 </span></p></li></ol><p><strong><span>加分回答</span></strong><span> </span></p><p><span>早期的synchronized性能较差,不如Lock。后来synchronized在实现上引入了锁升级机制,性能上已经不输给Lock了。所以,synchronized和Lock的区别主要不在性能上,因为二者性能相差无几。 </span></p><p><span>Java 6为了减少获取锁和释放锁带来的性能消耗,引入了偏向锁和轻量级锁。所以,从Java 6开始,锁一共被分为4种状态,级别由低到高依次是：</span><u><span>无锁、偏向锁、轻量级锁、重量级锁</span></u><span>。随着线程竞争情况的升级,锁的状态会从无锁状态逐步升级到重量级锁状态。</span></p><p><span>锁可以升级却不能降级,这种只能升不能降的策略,是为了提高效率。 </span></p><p><span>synchronized的早期设计并不包含锁升级机制,那个时候只有无锁和有锁之分。是为了提升性能才引入了偏向锁和轻量级锁,所以需要重点关注这两种状态的原理,以及它们的区别。 </span></p><p><span>偏向锁,顾名思义就是锁偏向于某一个线程。当一个线程访问同步块并获取锁时,会在对象头和栈帧中的锁记录里存储锁偏向的线程ID,以后该线程再进入和退出同步块时就不需要做加锁和解锁操作了,只需要简单地测试一下Mark Word里是否存储着自己的线程ID即可。 </span></p><p><span>轻量级锁,就是加锁时JVM先在当前线程栈帧中创建用于存储锁记录的空间,并将Mark Word复制到锁记录中,官方称之为Displaced Mark Word。然后线程尝试以CAS方式将Mark Word替换为指向锁记录的指针,如果成功则当前线程获得锁,如果失败则表示其他线程竞争锁,此时当前线程就会通过自旋来尝试获取锁。</span></p><hr /><p>&nbsp;</p><h3 id='说说volatile的用法及原理'><span>说说volatile的用法及原理</span></h3><p><strong><span>得分点</span></strong><span> 特性、内存语义、实现机制 </span></p><p><strong><span>标准回答</span></strong><span> </span></p><p><span>volatile是轻量级的synchronized,它在多处理器开发中保证了共享变量的“可见性”。可见性的意思是当一个线程修改一个共享变量时,另外一个线程能读到这个修改的值。</span></p><p><span>如果volatile使用恰当的话,它比synchronized的执行成本更低,因为它不会引起线程上下文的切换和调度。</span></p><p><span>简而言之,volatile变量具有以下特性：</span></p><ul><li><span>可见性：对一个volatile变量的读,总是能看到（任意线程）对这个volatile变量最后的写入。 </span></li><li><span>原子性：对单个volatile变量的读写具有原子性,对“volatile变量++”这种复合操作则不具有原子性。 </span></li></ul><p><span>volatile通过影响线程的内存可见性来实现上述特性,它具备如下的内存语义。其中,JMM是指Java内存模型,而本地内存只是JMM的一个抽象概念,它涵盖了缓存、写缓冲区、寄存器以及其他的硬件和编译器优化。在本文中,大家可以将其简单理解为缓存。</span></p><ul><li><span>写内存语义：当写一个volatile变量时,JMM会把该线程本地内存中的共享变量的值刷新到主内存中。 </span></li><li><span>读内存语义：当读一个volatile变量时,JMM会把该线程本地内存置为无效,使其从主内存中读取共享变量。 </span></li></ul><p><span>volatile的底层是采用内存屏障来实现的,就是在编译器生成字节码时,会在指令序列中插入内存屏障来禁止特定类型的处理器重排序。内存屏障就是一段与平台相关的代码,Java中的内存屏障代码都在Unsafe类中定义,共包含三个方法：LoadFence()、storeFence()、fullFence()。 </span></p><p><strong><span>加分回答</span></strong><span> </span></p><p><span>从内存语义的角度来说,volatile的读/写,与锁的获取/释放具有相同的内存效果。即volatile读与锁的获取有相同的内存语义,volatile写与锁的释放有相同的内存语义。 </span></p><p><span>volatile只能保证</span><u><span>单个变量读写</span></u><span>的原子性,而锁则可以保证对</span><u><span>整个临界区的代码执行</span></u><span>具有原子性。所以,在功能上锁比volatile更强大,在可伸缩性和性能上volatile更优优势。</span></p><hr /><p>&nbsp;</p><h3 id='说说你对threadlocal的理解'><span>说说你对ThreadLocal的理解</span></h3><p><strong><span>得分点</span></strong><span> 作用、实现机制 </span></p><p><strong><span>标准回答</span></strong><span> </span></p><p><span>ThreadLocal,即线程变量,它将需要并发访问的资源复制多份,让每个线程拥有一份资源。由于每个线程都拥有自己的资源副本,从而也就没有必要对该变量进行同步了。ThreadLocal提供了线程安全的共享机制,在编写多线程代码时,可以把不安全的变量封装进ThreadLocal。 在实现上,Thread类中声明了threadLocals变量,用于存放当前线程独占的资源。ThreadLocal类中定义了该变量的类型（ThreadLocalMap）,这是一个类似于Map的结构,用于存放键值对。ThreadLocal类中还提供了set和get方法,set方法会初始化ThreadLocalMap并将其绑定到Thread.threadLocals,从而将传入的值绑定到当前线程。在数据存储上,传入的值将作为键值对的value,而key则是ThreadLocal对象本身（this）。get方法没有任何参数,它会以当前ThreadLocal对象（this）为key,从Thread.threadLocals中获取与当前线程绑定的数据。 </span></p><p><strong><span>加分回答</span></strong><span> </span></p><blockquote><p><span>注意：ThreadLocal不能替代同步机制,两者面向的问题领域不同。</span></p></blockquote><p><span>同步机制是为了同步多个线程对相同资源的并发访问,是多个线程之间进行通信的有效方式。</span></p><p><span>而ThreadLocal是为了隔离多个线程的数据共享,从根本上避免多个线程之间对共享资源（变量）的竞争,也就不需要对多个线程进行同步了。 </span></p><p><span>一般情况下,如果多个线程之间需要共享资源,以达到线程之间的通信功能,就使用同步机制。如果仅仅需要隔离多个线程之间的共享冲突,则可以使用ThreadLocal。</span></p><hr /><p>&nbsp;</p><h3 id='请你说说线程和协程的区别'><span>请你说说线程和协程的区别</span></h3><p><strong><span>得分点</span></strong><span> 地址空间、开销、并发性、内存 </span></p><p><strong><span>标准回答</span></strong></p><p><span>进程和线程的主要差别在于它们是不同的操作系统资源管理方式。</span></p><ol start='' ><li><span>进程有独立的地址空间,线程有自己的堆栈和局部变量,但线程之间没有单独的地址空间；</span></li><li><span>进程和线程切换时,需要切换进程和线程的上下文,进程的上下文切换时间开销远远大于线程上下文切换时间,耗费资源较大,效率要差一些；</span></li><li><span>进程的并发性较低,线程的并发性较高；</span></li><li><span>每个独立的进程有一个程序运行的入口、顺序执行序列和程序的出口,但是线程不能够独立执行,必须依存在应用程序中,由应用程序提供多个线程执行控制；</span></li><li><span>系统在运行的时候会为每个进程分配不同的内存空间；而对线程而言,除了 CPU 外,系统不会为线程分配内存（线程所使用的资源来自其所属进程的资源）,线程组之间只能共享资源；</span></li><li><span>一个进程崩溃后,在保护模式下不会对其他进程产生影响,但是一个线程崩溃整个进程都死掉。所以多进程要比多线程健壮。</span></li></ol><hr /><p>&nbsp;</p><h3 id='请你说说多线程'><span>请你说说多线程</span></h3><p><strong><span>得分点</span></strong><span> 线程和进程的关系、为什么使用多线程 </span></p><p><strong><span>标准回答</span></strong></p><p><span>线程是操作系统调度的最小单元,它可以让一个进程并发地处理多个任务,也叫轻量级进程。所以,在一个进程里可以创建多个线程,这些线程都拥有各自的计数器、堆栈、局部变量,并且能够共享进程内的资源。由于共享资源,处理器便可以在这些线程之间快速切换,从而让使用者感觉这些线程在同时执行。 总的来说,操作系统可以同时执行多个任务,每个任务就是一个进程。进程可以同时执行多个任务,每个任务就是一个线程。一个程序运行之后至少有一个进程,而一个进程可以包含多个线程,但至少要包含一个线程。 使用多线程会给开发人员带来显著的好处,而使用多线程的原因主要有以下几点：</span></p><ol start='' ><li><span>更多的CPU核心 现代计算机处理器性能的提升方式,已经从追求更高的主频向追求更多的核心发展,所以处理器的核心数量会越来越多,充分地利用处理器的核心则会显著地提高程序的性能。而程序使用多线程技术,就可以将计算逻辑分配到多个处理器核心上,显著减少程序的处理时间,从而随着更多处理器核心的加入而变得更有效率。</span></li><li><span>更快的响应时间 我们经常要针对复杂的业务编写出复杂的代码,如果使用多线程技术,就可以将数据一致性不强的操作派发给其他线程处理（也可以是消息队列）,如上传图片、发送邮件、生成订单等。这样响应用户请求的线程就能够尽快地完成处理,大大地缩短了响应时间,从而提升了用户体验。</span></li><li><span>更好的编程模型 Java为多线程编程提供了良好且一致的编程模型,使开发人员能够更加专注于问题的解决,开发者只需为此问题建立合适的业务模型,而无需绞尽脑汁地考虑如何实现多线程。一旦开发人员建立好了业务模型,稍作修改就可以将其方便地映射到Java提供的多线程编程模型上。</span></li></ol><hr /><p>&nbsp;</p><h3 id='说说你了解的线程通信方式'><span>说说你了解的线程通信方式</span></h3><p><strong><span>得分点</span></strong><span> Monitor、Condition </span></p><p><strong><span>标准回答</span></strong></p><p><span>在Java中,常用的线程通信方式有两种,分别是利用Monitor实现线程通信、利用Condition实现线程通信。</span></p><p><span>线程同步是线程通信的前提,所以究竟采用哪种方式实现通信,取决于线程同步的方式。 </span></p><p><span>如果是采用synchronized关键字进行同步,则需要依赖Monitor（同步监视器）实现线程通信,Monitor就是锁对象。在synchronized同步模式下,锁对象可以是任意的类型,所以通信方法自然就被定义在Object类中了,这些方法包括：wt()、notify()、notifyAll()。一个线程通过Monitor调用wt()时,它就会释放锁并在此等待。当其他线程通过Monitor调用notify()时,则会唤醒在此等待的一个线程。当其他线程通过Monitor调用notifyAll()时,则会唤醒在此等待的所有线程。 </span></p><blockquote><p><span>JDK 1.5新增了Lock接口及其实现类,提供了更为灵活的同步方式。</span></p></blockquote><p><span>如果是采用Lock对象进行同步,则需要依赖Condition实现线程通信,Condition对象是由Lock对象创建出来的,它依赖于Lock对象。Condition对象中定义的通信方法,与Object类中的通信方法类似,它包括awt()、signal()、signalAll()。通过名字就能看出它们的含义了,当通过Condition调用awt()时当前线程释放锁并等待,当通过Condition调用signal()时唤醒一个等待的线程,当通过Condition调用signalAll()时则唤醒所有等待的线程。</span></p><p><strong><span>加分回答</span></strong></p><p><span>线程同步是基于同步队列实现的,而线程通信是基于等待队列实现的。当调用等待方法时,即将当前线程加入等待队列。当调用通知方法时,即将等待队列中的一个或多个线程转移回同步队列。因为synchronized只有一个Monitor,所以它就只有一个等待队列。而Lock对象可以创建出多个Condition,所以它拥有多个等待队列。多个等待队列带来了极大的灵活性,所以基于Condition的通信方式更为推荐。</span></p><p><span>比如,在实现生产消费模型时,生产者要通知消费者、消费者要通知生产者。相反,不应该出现生产者通知生产者、消费者通知消费者这样的情况。如果使用synchronized实现这个模型,由于它只有一个等待队列,所以只能把生产者和消费者加入同一个队列,这就会导致生产者通知生产者、消费者通知消费者的情况出现。采用Lock实现这个模型时,由于它有多个等待队列,可以有效地将这两个角色区分开,就能避免出现这样的问题。</span></p><hr /><p>&nbsp;</p><h3 id='说说怎么保证线程安全'><span>说说怎么保证线程安全</span></h3><p><strong><span>得分点</span></strong><span> 原子类、volatile、锁 </span></p><p><strong><span>标准回答</span></strong><span> </span></p><p><span>Java保证线程安全的方式有很多,其中较为常用的有三种,按照资源占用情况由轻到重排列,这三种保证线程安全的方式分别是原子类、volatile、锁。 </span></p><p><span>JDK从1.5开始提供了</span><code>java.util.concurrent.atomic</code><span>包,这个包中的原子操作类提供了一种用法简单、性能高效、线程安全地更新一个变量的方式。在atomic包里一共提供了17个类,按功能可以归纳为4种类型的原子更新方式,分别是原子更新基本类型、原子更新引用类型、原子更新属性、原子更新数组。无论原子更新哪种类型,都要遵循“比较和替换”规则,即比较要更新的值是否等于期望值,如果是则更新,如果不是则失败。 </span></p><p><span>volatile是轻量级的synchronized,它在多处理器开发中保证了共享变量的“可见性”,从而可以保证单个变量读写时的线程安全。可见性问题是由处理器核心的缓存导致的,每个核心均有各自的缓存,而这些缓存均要与内存进行同步。volatile具有如下的内存语义：当写一个volatile变量时,该线程本地内存中的共享变量的值会被立刻刷新到主内存；当读一个volatile变量时,该线程本地内存会被置为无效,迫使线程直接从主内存中读取共享变量。 </span></p><p><span>原子类和volatile只能保证单个共享变量的线程安全,锁则可以保证临界区内的多个共享变量的线程安全,Java中加锁的方式有两种,分别是synchronized关键字和Lock接口。synchronized是比较早期的API,在设计之初没有考虑到超时机制、非阻塞形式,以及多个条件变量。若想通过升级的方式让它支持这些相对复杂的功能,则需要大改它的语法结构,不利于兼容旧代码。因此,JDK的开发团队在1.5新增了Lock接口,并通过Lock支持了上述的功能,即：支持响应中断、支持超时机制、支持以非阻塞的方式获取锁、支持多个条件变量（阻塞队列）。 </span></p><p><strong><span>加分回答</span></strong><span> </span></p><p><span>实现线程安全的方式有很多,除了上述三种方式之外,还有如下几种方式： </span></p><ol start='' ><li><p><span>无状态设计 线程安全问题是由多线程并发修改共享变量引起的,如果在并发环境中没有设计共享变量,则自然就不会出现线程安全问题了。这种代码实现可以称作“无状态实现”,所谓状态就是指共享变量。 </span></p></li><li><p><span>不可变设计 如果在并发环境中不得不设计共享变量,则应该优先考虑共享变量是否为只读的,如果是只读场景就可以将共享变量设计为不可变的,这样自然也不会出现线程安全问题了。具体来说,就是在变量前加final修饰符,使其不可被修改,如果变量是引用类型,则将其设计为不可变类型（参考String类）。 </span></p></li><li><p><span>并发工具 </span><code>java.util.concurrent</code><span>包提供了几个有用的并发工具类,一样可以保证线程安全：</span></p><ul><li><span>Semaphore：就是信号量,可以控制同时访问特定资源的线程数量。 </span></li><li><span>CountDownLatch：允许一个或多个线程等待其他线程完成操作。</span></li><li><span>CyclicBarrier：让一组线程到达一个屏障时被阻塞,直到最后一个线程到达屏障时,屏障才会打开,所有被屏障拦截的线程才会继续运行。 </span></li></ul></li><li><p><span>本地存储 我们也可以考虑使用ThreadLocal存储变量,ThreadLocal可以很方便地为每一个线程单独存一份数据,也就是将需要并发访问的资源复制成多份。这样一来,就可以避免多线程访问共享变量了,它们访问的是自己独占的资源,它从根本上隔离了多个线程之间的数据共享。</span></p></li></ol><hr /><p>&nbsp;</p><h3 id='你知道哪些线程安全的集合'><span>你知道哪些线程安全的集合？</span></h3><p><strong><span>得分点</span></strong><span> Collections、java.util.concurrent (JUC) </span></p><p><strong><span>标准回答</span></strong><span> </span></p><p><span>java.util包下的集合类中,大部分都是非线程安全的,但也有少数的线程安全的集合类,例如Vector、Hashtable,它们都是非常古老的API。虽然它们是线程安全的,但是性能很差,已经不推荐使用了。对于这个包下非线程安全的集合,可以利用Collections工具类,该工具类提供的synchronizedXxx()方法,可以将这些集合类包装成线程安全的集合类。 </span></p><p><span>从JDK 1.5开始,并发包下新增了大量高效的并发的容器,这些容器按照实现机制可以分为三类。</span></p><p><span>第一类是以降低锁粒度来提高并发性能的容器,它们的类名以Concurrent开头,如ConcurrentHashMap。</span></p><p><span>第二类是采用写时复制技术实现的并发容器,它们的类名以CopyOnWrite开头,如CopyOnWriteArrayList。</span></p><p><span>第三类是采用Lock实现的阻塞队列,内部创建两个Condition分别用于生产者和消费者的等待,这些类都实现了BlockingQueue接口,如ArrayBlockingQueue。 </span></p><p><strong><span>加分回答</span></strong><span> </span></p><p><span>Collections还提供了如下三类方法来返回一个不可变的集合,这三类方法的参数是原有的集合对象,返回值是该集合的“只读”版本。通过Collections提供的三类方法,可以生成“只读”的Collection或Map。 emptyXxx()：返回一个空的不可变的集合对象 singletonXxx()：返回一个只包含指定对象的不可变的集合对象 unmodifiableXxx()：返回指定集合对象的不可变视图</span></p><hr /><p>&nbsp;</p><h3 id='说说你对线程池的理解'><span>说说你对线程池的理解</span></h3><p><strong><span>得分点</span></strong><span> 核心参数、处理流程、拒绝策略 </span></p><p><strong><span>标准回答</span></strong><span> </span></p><p><span>线程池可以有效地管理线程：它可以管理线程的数量,可以避免无节制的创建线程,导致超出系统负荷直至崩溃。它还可以让线程复用,可以大大地减少创建和销毁线程所带来的开销。</span></p><p><span>线程池需要依赖一些参数来控制任务的执行流程,其中最重要的参数有：corePoolSize（核心线程数）、workQueue（等待队列）、maxinumPoolSize（最大线程数）、handler（拒绝策略）、keepAliveTime（空闲线程存活时间）。</span></p><p><span>当我们向线程池提交一个任务之后,线程池按照如下步骤处理这个任务：</span></p><ol start='' ><li><span>判断线程数是否达到corePoolSize,若没有则新建线程执行该任务,否则进入下一步。</span></li><li><span>判断等待队列是否已满,若没有则将任务放入等待队列,否则进入下一步。</span></li><li><span>判断线程数是否达到maxinumPoolSize,如果没有则新建线程执行任务,否则进入下一步。</span></li><li><span>采用初始化线程池时指定的拒绝策略,拒绝执行该任务。</span></li><li><span>新建的线程处理完当前任务后,不会立刻关闭,而是继续处理等待队列中的任务。</span></li></ol><p><span>如果线程的空闲时间达到了keepAliveTime,则线程池会销毁一部分线程,将线程数量收缩至corePoolSize。 第2步中的队列可以有界也可以无界。若指定了无界的队列,则线程池永远无法进入第3步,相当于废弃了maxinumPoolSize参数。这种用法是十分危险的,如果任务在队列中产生大量的堆积,就很容易造成内存溢出。</span></p><p><span>JDK为我们提供了一个名为Executors的线程池的创建工具,该工具创建出来的就是带有无界队列的线程池,所以一般在工作中我们是不建议使用这个类来创建线程池的。 第4步中的拒绝策略主要有4个：让调用者自己执行任务、直接抛出异常、丢弃任务不做任何处理、删除队列中最老的任务并把当前任务加入队列。这4个拒绝策略分别对应着</span><code>RejectedExecutionHandler</code><span>接口的4个实现类,我们也可以基于这个接口实现自己的拒绝策略。 在Java中,线程池的实际类型为ThreadPoolExecutor,它提供了线程池的常规用法。该类还有一个子类,名为</span><code>ScheduledThreadPoolExecutor</code><span>,它对定时任务提供了支持。在子类中,我们可以周期性地重复执行某个任务,也可以延迟若干时间再执行某个任务。</span></p><p><strong><span>加分回答</span></strong></p><p><span>线程池的生命周期包含5个状态：RUNNING、SHUTDOWN、STOP、TIDING、TERMINATED。</span></p><p><span>这5种状态的状态值分别是：-1、0、1、2、3。</span></p><p><span>在线程池的生命周期中,它的状态只能</span><u><span>由小到大迁移</span></u><span>,</span><u><span>是不可逆</span></u><span>的。 </span></p><ol start='' ><li><span>RUNNING：表示线程池正在运行。</span></li><li><span>SHUTDOWN：执行shutdown()时进入该状态,此时队列不会清空,线程池会等待任务执行完毕。</span></li><li><span>STOP：执行shutdownNow()时进入该状态,此时现线程池会清空队列,不再等待任务的执行。</span></li><li><span>TIDING：当线程池及队列为空时进入该状态,此时线程池会执行钩子函数,目前该函数是一个空的实现。</span></li><li><span>TERMINATED：钩子函数执行完毕后,线程进入该状态,表示线程池已经死亡。</span></li></ol><hr /><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p></div></div>
+</body>
+</html>
